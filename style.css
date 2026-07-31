@@ -161,21 +161,21 @@ body {
 }
 
 #music-button {
-    position: absolute;
+    position: fixed;
     top: 25px;
-    left: 85%;
+    left: 68.5%;
     transform: translateX(-50%);
 
-    width: 180px;
-    height: 55px;
+    width: 240px;
+    height: 70px;
 
     border: 2px solid #d4af37;
-    border-radius: 30px;
+    border-radius: 35px;
 
     background: #d4af37;
     color: white;
 
-    font-size: 18px;
+    font-size: 22px;
     font-family: "Playfair Display", serif;
     font-weight: bold;
 
