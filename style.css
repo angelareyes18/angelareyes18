@@ -190,7 +190,7 @@ body {
 }
 
 #music-button:hover {
-    transform: translateX(-50%);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
 #music-button.playing {
