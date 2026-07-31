@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -187,4 +188,195 @@ body {
 
 #music-button.playing {
     background: #b8860b;
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Imported Designs */
+.design {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.design img {
+    width: 800px;
+    display: block;
+}
+
+.invitation {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* VENUE ADDRESS: */
+.venue {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.venue img {
+    width: 800px;
+}
+
+/* MAP BUTTON (View on Google Maps)*/
+.map-button {
+    position: absolute;
+    top: 475px;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 6px 20px;
+    background: gray;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.map-button:hover {
+    background: black;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* RSVP Button */
+.rsvp {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.rsvp img {
+    width: 800px;
+    display: block;
+}
+
+.rsvp-link {
+    position: absolute;
+    top: 67%;
+    left: 30%;
+    width: 42%;
+    height: 7%;
+}
+
+/* Countdown */
+.countdown {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.countdown img {
+    width: 800px;
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.countdown .number,
+.countdown .label {
+    display: block;
+    text-align: center;
+}
+
+.countdown .number {
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1;
+}
+
+.countdown .label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #666;
+    margin-top: 25px;
+    display: block;
+}
+
+#days {
+    top: 400px;
+    left: 140px;
+}
+
+#hours {
+    top: 400px;
+    left: 290px;
+}
+
+#minutes {
+    top: 400px;
+    left: 440px;
+}
+
+#seconds {
+    top: 400px;
+    left: 590px;
+}
+
+#music-button {
+    position: absolute;
+    top: 25px;
+    left: 0;
+
+    width: 100%;
+    max-width: 180px;
+
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1000;
+
+    height: 55px;
+
+    border: 2px solid #d4af37;
+    border-radius: 30px;
+
+    background: #d4af37;
+    color: white;
+
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+#music-button:hover {
+    transform: translateX(-50%);
+}
+
+#music-button.playing {
+    background: #b8860b;
+>>>>>>> 00f2cd5bbfdf6ddeff13ef12fbde13968b49585f
 }
