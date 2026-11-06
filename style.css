@@ -11,17 +11,19 @@ body {
 
 /* Imported Designs */
 .design {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .design img {
-    width: 800px;
+    width: 100%;
+    height: auto;
     display: block;
 }
 
 .invitation {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     position: relative;
 }
@@ -29,31 +31,34 @@ body {
 /* VENUE ADDRESS: */
 .venue {
     position: relative;
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
+    container-type: inline-size;
 }
 
 .venue img {
-    width: 800px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* MAP BUTTON (View on Google Maps)*/
 .map-button {
     position: absolute;
-    top: 475px;
+    top: 42.4%;
     left: 52%;
     transform: translateX(-50%);
-    width: 300px;
-    padding: 6px 20px;
+    width: 37.5%;
+    padding: 0.75cqw 2.5cqw;
     background: gray;
     color: white;
     text-align: center;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 1cqw;
     font-family: "Cinzel Decorative", serif;
-    font-size: 18px;
+    font-size: 2.25cqw;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 0.125cqw;
 }
 
 .map-button:hover {
@@ -64,12 +69,12 @@ body {
 
 .map-link {
     position: absolute;
-    top: 655px;
+    top: 58.5%;
     left: 52%;
     transform: translateX(-50%);
 
-    width: 600px; 
-    height: 385px;
+    width: 75%;
+    height: 34.4%;
 
     display: block;
     background: transparent;
@@ -78,12 +83,13 @@ body {
 /* RSVP Button */
 .rsvp {
     position: relative;
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .rsvp img {
-    width: 800px;
+    width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -98,12 +104,15 @@ body {
 /* Countdown */
 .countdown {
     position: relative;
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
+    container-type: inline-size;
 }
 
 .countdown img {
-    width: 800px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 #days,
@@ -124,7 +133,7 @@ body {
 
 .countdown .number {
     font-family: "Playfair Display", serif;
-    font-size: 64px;
+    font-size: 8cqw;
     font-weight: bold;
     color: #333;
     line-height: 1;
@@ -132,32 +141,32 @@ body {
 
 .countdown .label {
     font-family: "Montserrat", sans-serif;
-    font-size: 18px;
+    font-size: 2.25cqw;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 0.375cqw;
     color: #666;
-    margin-top: 25px;
+    margin-top: 3.125cqw;
     display: block;
 }
 
 #days {
-    top: 400px;
-    left: 140px;
+    top: 35.7%;
+    left: 17.5%;
 }
 
 #hours {
-    top: 400px;
-    left: 290px;
+    top: 35.7%;
+    left: 36.25%;
 }
 
 #minutes {
-    top: 400px;
-    left: 440px;
+    top: 35.7%;
+    left: 55%;
 }
 
 #seconds {
-    top: 400px;
-    left: 590px;
+    top: 35.7%;
+    left: 73.75%;
 }
 
 
@@ -195,4 +204,18 @@ body {
 
 #music-button.playing {
     background: #b8860b;
+}
+
+/* On narrow screens, pin the music button to the top-right corner */
+@media (max-width: 800px) {
+    #music-button {
+        top: 12px;
+        left: auto;
+        right: 12px;
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
 }

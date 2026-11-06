@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    const countdown = setInterval(() => {
+    let countdown;
+
+    const updateCountdown = () => {
 
         const now = Date.now();
         const distance = eventDate - now;
@@ -59,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         minutesNumber.textContent = minutes.toString();
         secondsNumber.textContent = seconds.toString();
 
-    }, 1000);
+    };
+
+    updateCountdown();
+    countdown = setInterval(updateCountdown, 1000);
 
 
     // AUDIO 
@@ -72,13 +77,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
             if (music.paused) {
-                music.play();
-                button.textContent = "⏸ Pause Music";
-                button.classList.add("playing");
+                music.play().then(() => {
+                    button.textContent = "⏸ Pause Music";
+                    button.classList.add("playing");
+                    button.setAttribute("aria-pressed", "true");
+                }).catch((err) => {
+                    console.log("Music could not play:", err);
+                });
             } else {
                 music.pause();
                 button.textContent = "▶ Play Music";
                 button.classList.remove("playing");
+                button.setAttribute("aria-pressed", "false");
             }
         });
     }
