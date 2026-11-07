@@ -2,6 +2,45 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ENVELOPE: open on click / Enter / Space, then reveal the invitation
+    const envelope = document.getElementById("envelope-screen");
+
+    if (envelope) {
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        const openEnvelope = () => {
+            if (envelope.classList.contains("is-opening")) return;
+
+            envelope.classList.add("is-opening");
+
+            // Start the music as part of the tap (browsers require a user gesture)
+            const musicButton = document.getElementById("music-button");
+            const musicEl = document.getElementById("background-music");
+            if (musicButton && musicEl instanceof HTMLAudioElement && musicEl.paused) {
+                musicButton.click();
+            }
+
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+                document.body.classList.remove("sealed");
+                envelope.classList.add("is-opened");
+                setTimeout(() => envelope.remove(), reduceMotion ? 50 : 1000);
+            }, reduceMotion ? 50 : 2500);
+        };
+
+        envelope.addEventListener("click", openEnvelope);
+        envelope.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openEnvelope();
+            }
+        });
+    }
+
     const eventDate = Date.parse("2027-01-16T17:00:00-05:00");    
     
     const daysEl = document.getElementById("days");
@@ -70,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // AUDIO 
     const music = document.getElementById("background-music");
     const button = document.getElementById("music-button");
+    const musicLabel = button && button.querySelector(".music-label");
 
     if (music instanceof HTMLAudioElement && button instanceof HTMLButtonElement) {
 
@@ -78,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", () => {
             if (music.paused) {
                 music.play().then(() => {
-                    button.textContent = "⏸ Pause Music";
+                    if (musicLabel) musicLabel.textContent = "Pause Music";
                     button.classList.add("playing");
                     button.setAttribute("aria-pressed", "true");
                 }).catch((err) => {
@@ -86,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             } else {
                 music.pause();
-                button.textContent = "▶ Play Music";
+                if (musicLabel) musicLabel.textContent = "Play Music";
                 button.classList.remove("playing");
                 button.setAttribute("aria-pressed", "false");
             }

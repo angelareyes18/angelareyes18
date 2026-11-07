@@ -1,132 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Angela's 18th Birthday</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Montserrat:wght@600&family=Playfair+Display:wght@700&display=swap">
+        <link rel="icon" type="image/png" href="./favicon.png">
+        <meta name="description" content="You're invited to Janaiah Angela's 18th birthday, Saturday, January 16, 2027 at 5:00 PM, Palace Convention Centre, Laval, Quebec.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://angelareyes18.github.io/angelareyes18/">
+        <meta property="og:title" content="Angela's 18th Birthday">
+        <meta property="og:description" content="Saturday, January 16, 2027 · 5:00 PM · Palace Convention Centre, Laval. Please RSVP by December 20, 2026.">
+        <meta property="og:image" content="https://angelareyes18.github.io/angelareyes18/DESIGN/1.cover.jpg">
+        <meta property="og:image:width" content="1428">
+        <meta property="og:image:height" content="2000">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angela's 18th Birthday</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@600&family=Playfair+Display:wght@700&display=swap">
-    <link rel="icon" type="image/png" href="./favicon.png">
-    <meta name="description"
-        content="You're invited to Janaiah Angela's 18th birthday, Saturday, January 16, 2027 at 5:00 PM, Palace Convention Centre, Laval, Quebec.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://angelareyes18.github.io/angelareyes18/">
-    <meta property="og:title" content="Angela's 18th Birthday">
-    <meta property="og:description"
-        content="Saturday, January 16, 2027 · 5:00 PM · Palace Convention Centre, Laval. Please RSVP by December 20, 2026.">
-    <meta property="og:image" content="https://angelareyes18.github.io/angelareyes18/DESIGN/1.cover.jpg">
-    <meta property="og:image:width" content="1428">
-    <meta property="og:image:height" content="2000">
-</head>
+    <body class="sealed">
+        <!--ENVELOPE (covers the page until opened)-->
+        <div id="envelope-screen" class="envelope-screen" role="button" tabindex="0" aria-label="Open the invitation">
+            <p class="envelope-title">You're Invited</p>
+            <p class="envelope-subtitle">Janaiah Angela's 18th Birthday</p>
 
-<body>
-    <div class="invitation">
-        <!--AUDIO-->
-        <audio id="background-music" loop preload="none">
-            <source src="./beauty-and-the-beast.m4a" type="audio/mp4">
-        </audio>
+            <div class="envelope">
+                <div class="envelope-back"></div>
 
-        <button id="music-button" aria-pressed="false">▶ Play Music</button>
+                <div class="envelope-letter">
+                    <img src="./DESIGN/1.cover.jpg" width="1428" height="2000" alt="">
+                </div>
 
-        <!--You are Invited-->
-        <div class="design">
-            <img src="./DESIGN/1.cover.jpg" width="1428" height="2000"
-                alt="Together with their family, Mr. Jeffrey and Mrs. Odessa Reyes cordially invite you to celebrate Janaiah Angela's 18th birthday. Saturday, January 16, 2027 at 5:00 PM. Palace Convention Center, 1717 Boulevard Le Corbusier, Laval, Quebec. An enchanted evening awaits. We would be honored to celebrate this magical milestone with you."
-                fetchpriority="high">
-        </div>
+                <svg class="envelope-pocket" viewBox="0 0 100 70" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="env-side" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0" stop-color="#a9c8d2"/>
+                            <stop offset="1" stop-color="#c3dbe2"/>
+                        </linearGradient>
+                        <linearGradient id="env-side-r" x1="1" y1="0" x2="0" y2="0">
+                            <stop offset="0" stop-color="#a9c8d2"/>
+                            <stop offset="1" stop-color="#c3dbe2"/>
+                        </linearGradient>
+                        <linearGradient id="env-bottom" x1="0" y1="1" x2="0" y2="0">
+                            <stop offset="0" stop-color="#b5d1da"/>
+                            <stop offset="1" stop-color="#d0e4ea"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M0,0 L50,40 L0,70 Z" fill="url(#env-side)"/>
+                    <path d="M100,0 L50,40 L100,70 Z" fill="url(#env-side-r)"/>
+                    <path d="M0,70 L50,34 L100,70 Z" fill="url(#env-bottom)" stroke="#c9a24a" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+                </svg>
 
-        <!--Venue Details (Address)-->
-        <div class="venue">
-            <img src="./DESIGN/2.venue.jpg" width="1428" height="2000"
-                alt="Venue: Palace Convention Centre, 1717 Boulevard Le Corbusier, Laval, QC H7S 2K7." loading="lazy">
+                <div class="envelope-flap">
+                    <svg viewBox="0 0 100 43" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="env-flap" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#c7dee5"/>
+                                <stop offset="1" stop-color="#a6c5cf"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M0,0 L100,0 L50,43 Z" fill="url(#env-flap)" stroke="#c9a24a" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+                    </svg>
+                </div>
 
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Palace+Convention+Centre+1717+Boulevard+Le+Corbusier+Laval+QC+H7S+2K7"
-                class="map-button" target="_blank" rel="noopener">
-                View on Google Maps
-            </a>
-
-            <a class="map-link" aria-label="Open venue in Google Maps"
-                href="https://www.google.com/maps/search/?api=1&amp;query=Palace+Convention+Centre+1717+Boulevard+Le+Corbusier+Laval+QC+H7S+2K7"
-                target="_blank" rel="noopener"></a>
-        </div>
-
-        <!--Details (Dress Code, Gifts, etc.)-->
-        <div class="design">
-            <img src="./DESIGN/3.details.jpg" width="1428" height="2000"
-                alt="Details. Dress code: Formal. We invite our female guests to wear a long dress or an elegant cocktail dress. We respectfully request that you avoid wearing yellow. Gifts: Your presence is the greatest gift of all! Should you wish to bless the birthday celebrant with a gift, a monetary gift would be sincerely appreciated. Thank you for being part of this magical celebration. Love, Angela."
-                loading="lazy">
-        </div>
-
-        <!--18 Roses-->
-        <div class="design">
-            <img src="./DESIGN/4.18roses.jpg" width="1428" height="2000" 
-                alt="18 Roses: Basil Dela Cruz, Jomar Dela Cruz, Edgar de Roxas, Jigs Fernandez, Vince Gopez, Ronald Paterno, Ryan Ranoco, Joel Trocio, Shaiyan Rahman, Riche Nguyen, Christophe Cruz, Ashwin Siva, Angelo Madayag, Ronnel Torres, Gian Cobe Baeta, Marion Dalangin, Jomar Reyes, Joseph Andrei Santiano Reyes" 
-                loading="lazy">
-        </div>
-
-        <!--18 Treasures-->
-        <div class="design">
-            <img src="./DESIGN/5.18 treasures.jpg" width="1428" height="2000" 
-                alt="18 Treasure: Marilou Dela Cruz, Aly Gandia, Maryanne Gopez, Gia Paterno, Virna Gopez, Johanna Ban-eg, Emily Acuna, Grace Kelly Canilao, Daisy Rafols, Ronalyn Ranoco, Ritchie De Roxas, Vivian De Roxas, Maureen Joan Aguero, Daisy Aquino, Julie Saromenes, Rachell Endozo, Al Claire Aviles-Trocio, Kathleen Dalangin"
-                loading="lazy">
-        </div>
-
-        <!--18 Candles-->
-        <div class="design">
-            <img src="./DESIGN/6.18 candles.jpg" width="1428" height="2000"
-            alt="18 Candles: Janella Averey Reyes, Priscillia Nguyen, Janine Gomez, Yuna Villafranca, Karla Quinajon, Yzabela Ramos, Fatima Daou, Meiji Grace Estrada, Austine Guzman, Kia Tabios, Saffiyah Rizvi, Chloe Rivera, Mariella Aura Flor, Danica Dolente, Divina Takpara, Chloe Anne Zamora, Jennifer Quynh, Sarah Cherouane"
-            loading="lazy">
-        </div>
-
-        <!--Program Details (Order of Events)-->
-        <div class="design">
-            <img src="./DESIGN/7.program.jpg" width="1428" height="2000"
-                alt="Program: 4:30 PM arrival of guests. 5:00 PM cocktail hour. 6:30 PM grand entrance. 7:30 PM dinner. 8:30 PM party."
-                loading="lazy">
-        </div>
-
-        <!--RSVP link-->
-
-        <div class="rsvp">
-            <img src="./DESIGN/8.rsvp.jpg" width="1428" height="2000"
-                alt="Be our guest. The best memories are created with special people like you. It would be a pleasure to have you join us. Please RSVP by December 20, 2026 by clicking the RSVP button and filling in the form to confirm your attendance."
-                loading="lazy">
-            <a class="rsvp-link" href="https://forms.gle/wLHYWRQAx8Fb5sa77" target="_blank" rel="noopener"
-                aria-label="RSVP on Google Forms"></a>
-        </div>
-
-        <!--Countdown-->
-        <div class="countdown">
-            <img src="./DESIGN/9.countdown.jpg" width="1428" height="2000"
-                alt="Countdown to the party. I can't wait to celebrate with you. Love, Angela." loading="lazy">
-
-            <div id="days">
-                <span class="number">–</span>
-                <span class="label">DAYS</span>
+                <div class="envelope-seal">
+                    <img src="./favicon.png" width="192" height="192" alt="">
+                </div>
             </div>
 
-            <div id="hours">
-                <span class="number">–</span>
-                <span class="label">HOURS</span>
+            <p class="envelope-hint">Tap to open</p>
+        </div>
+        <noscript><style>.envelope-screen { display: none; } body.sealed { overflow: auto; }</style></noscript>
+
+        <div class="invitation">
+            <!--AUDIO-->
+            <audio id="background-music" loop preload="none">
+                <source src="./beauty-and-the-beast.m4a" type="audio/mp4">
+            </audio>
+
+            <button id="music-button" aria-pressed="false" aria-label="Background music">
+                <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>
+                <span class="music-label">Play Music</span>
+            </button>
+
+            <!--You are Invited-->
+            <div class="design">
+                <img src="./DESIGN/1.cover.jpg" width="1428" height="2000" alt="Together with their family, Mr. Jeffrey and Mrs. Odessa Reyes cordially invite you to celebrate Janaiah Angela's 18th birthday. Saturday, January 16, 2027 at 5:00 PM. Palace Convention Center, 1717 Boulevard Le Corbusier, Laval, Quebec. An enchanted evening awaits. We would be honored to celebrate this magical milestone with you." fetchpriority="high">
             </div>
 
-            <div id="minutes">
-                <span class="number">–</span>
-                <span class="label">MINUTES</span>
+            <!--Venue Details (Address)-->
+            <div class="venue">
+                <img src="./DESIGN/2.venue.jpg" width="1428" height="2000" alt="Venue: Palace Convention Centre, 1717 Boulevard Le Corbusier, Laval, QC H7S 2K7." loading="lazy">
+
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Palace+Convention+Centre+1717+Boulevard+Le+Corbusier+Laval+QC+H7S+2K7"
+                    class="map-button" target="_blank" rel="noopener">
+                    View on Google Maps
+                </a>
+
+                <a class="map-link" aria-label="Open venue in Google Maps" href="https://www.google.com/maps/search/?api=1&amp;query=Palace+Convention+Centre+1717+Boulevard+Le+Corbusier+Laval+QC+H7S+2K7" target="_blank" rel="noopener"></a>
             </div>
 
-            <div id="seconds">
-                <span class="number">–</span>
-                <span class="label">SECONDS</span>
+            <!--Details (Dress Code, Gifts, etc.)-->
+            <div class="design">
+                <img src="./DESIGN/3.details.jpg" width="1428" height="2000" alt="Details. Dress code: Formal. We invite our female guests to wear a long dress or an elegant cocktail dress. We respectfully request that you avoid wearing yellow. Gifts: Your presence is the greatest gift of all! Should you wish to bless the birthday celebrant with a gift, a monetary gift would be sincerely appreciated. Thank you for being part of this magical celebration. Love, Angela." loading="lazy">
+            </div>
+
+            <!--18 Roses-->
+            <div class="design">
+                <img src="./DESIGN/4.18roses.jpg" width="1428" height="2000" alt="18 Roses: Basil Dela Cruz, Jomar Dela Cruz, Edgar de Roxas, Jigs Fernandez, Vince Gopez, Ronald Paterno, Ryan Ranoco, Joel Trocio, Shaiyan Rahman, Riche Nguyen, Christophe Cruz, Ashwin Siva, Angelo Madayag, Ronnel Torres, Gian Cobe Baeta, Marion Dalangin, Jomar Reyes, Joseph Andrei Santiano Reyes" loading="lazy">
+            </div>
+
+            <!--18 Treasures-->
+            <div class="design">
+                <img src="./DESIGN/5.18 treasures.jpg" width="1428" height="2000" alt="18 Treasure: Marilou Dela Cruz, Aly Gandia, Maryanne Gopez, Gia Paterno, Virna Gopez, Johanna Ban-eg, Emily Acuna, Grace Kelly Canilao, Daisy Rafols, Ronalyn Ranoco, Ritchie De Roxas, Vivian De Roxas, Maureen Joan Aguero, Daisy Aquino, Julie Saromenes, Rachell Endozo, Al Claire Aviles-Trocio, Kathleen Dalangin" loading="lazy">
+            </div>
+
+            <!--18 Candles-->
+            <div class="design">
+                <img src="./DESIGN/6.18 candles.jpg" width="1428" height="2000" alt="18 Candles: Janella Averey Reyes, Priscillia Nguyen, Janine Gomez, Yuna Villafranca, Karla Quinajon, Yzabela Ramos, Fatima Daou, Meiji Grace Estrada, Austine Guzman, Kia Tabios, Saffiyah Rizvi, Chloe Rivera, Mariella Aura Flor, Danica Dolente, Divina Takpara, Chloe Anne Zamora, Jennifer Quynh, Sarah Cherouane" loading="lazy">
+            </div>
+
+            <!--Program Details (Order of Events)-->
+            <div class="design">
+                <img src="./DESIGN/7.program.jpg" width="1428" height="2000" alt="Program: 4:30 PM arrival of guests. 5:00 PM cocktail hour. 6:30 PM grand entrance. 7:30 PM dinner. 8:30 PM party." loading="lazy">
+            </div>
+
+            <!--RSVP link-->
+
+            <div class="rsvp">
+                <img src="./DESIGN/8.rsvp.jpg" width="1428" height="2000" alt="Be our guest. The best memories are created with special people like you. It would be a pleasure to have you join us. Please RSVP by December 20, 2026 by clicking the RSVP button and filling in the form to confirm your attendance." loading="lazy">
+                <a class="rsvp-link" href="https://forms.gle/wLHYWRQAx8Fb5sa77" target="_blank" rel="noopener" aria-label="RSVP on Google Forms"></a>
+            </div>
+
+            <!--Countdown-->
+            <div class="countdown">
+                <img src="./DESIGN/9.countdown.jpg" width="1428" height="2000" alt="Countdown to the party. I can't wait to celebrate with you. Love, Angela." loading="lazy">
+
+                <div id="days">
+                    <span class="number">–</span>
+                    <span class="label">DAYS</span>
+                </div>
+
+                <div id="hours">
+                    <span class="number">–</span>
+                    <span class="label">HOURS</span>
+                </div>
+
+                <div id="minutes">
+                    <span class="number">–</span>
+                    <span class="label">MINUTES</span>
+                </div>
+
+                <div id="seconds">
+                    <span class="number">–</span>
+                    <span class="label">SECONDS</span>
+                </div>
             </div>
         </div>
-    </div>
-
-    <script src="./script.js" defer></script>
-</body>
-
+        <script src="./script.js" defer></script>
+    </body>
 </html>
